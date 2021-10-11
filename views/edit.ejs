@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../static/home.css">
     <link rel="stylesheet" href="../static/card.css">
     <link rel="stylesheet" href="../static/nav.css">
+    <link rel="stylesheet" href="../static//upload.css">
+
 </head>
 
 <body>
@@ -33,38 +35,40 @@
         </ul>
     </nav>
 
-        <!-- <div class="card col-lg-4" style="width: 18rem;">
-            <img class="card-img-top" src="https://wallup.net/wp-content/uploads/2018/10/04/355164-cat-meme-quote-funny-humor-grumpy-sadic.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card'scontent.
-                </p>
-                <a href="#" class="btn btn-warning">Edit</a>
-                <a href="#" class="btn btn-danger" style="display: inline;">Delete</a>
-            </div>
-        </div> -->
->
-        <div class="container">
-            <div class="row">
-                <% for(let i=0; i < memes.length ; i++) { %>
-                    <div class="col-4">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="<%- memes[i].url%>" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title"><%- memes[i].title%></h5>
-                                <p class="card-text">
-                                    <%- memes[i].des%>
-                                </p>
-                                <form class="form" action="/edit<%- memes[i].id %>" method="POST"><a href="/edit<%- memes[i].id %>" class="btn btn-warning">Edit</a></form>
-                                <form class="form" action="/delete" method="POST"><a href="/" class="btn btn-danger" style="display: inline;">Delete</a></form>
-                            </div>
+    <div class="container">
+        <div class="row">
+            <% for(let i=0; i < memes.length ; i++) { %>
+                <div class="col-sm-7">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<%- memes[0].url%>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><%- memes[0].title%></h5>
+                            <p class="card-text">
+                                <%- memes[0].des%>
+                            </p>
                         </div>
                     </div>
-                <% } %> 
-            </div>
+                </div>
+            <% } %> 
+            <form class="mt-5" method="POST" action="/edited" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Description <span style="color: grey;">(Optional)</span></label>
+                    <textarea type="text" name="des" class="form-control" rows="3" id="comment"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="source">Source URL:</label>
+                    <input type="url" name="url" class="form-control" id="source">
+                </div>
+                <button class="btn btn-primary">Post</button>
+            </form>
         </div>
-    
+
+    </div>
+
     </html>
 
     <!-- Optional JavaScript -->

@@ -10,9 +10,13 @@ app.use(bodyParser.json())
 
 const home = require('./router/homeRouter')
 const upload = require('./router/uploadRouter')
+const edit = require('./router/editRouter')
+const edited = require('./router/editedRouter')
 
 app.use("/",home)
 app.use(upload)
+app.use(edit)
+app.use(edited)
 
 const port = 8080
 

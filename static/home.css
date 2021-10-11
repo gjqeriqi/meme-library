@@ -1,3 +1,6 @@
 body{
     background-color: #F8F9FA;
 }
+.form{
+    display: inline-block;
+}
