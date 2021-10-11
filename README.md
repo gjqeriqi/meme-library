@@ -4,8 +4,8 @@
 
 
 1. Import "memelib.slq" in database.
-2. Type "npm i" on terminal, wait for node modules to install.
-3. After node modules installs on the project type "npm start" on terminal to start the project.
+2. Type "npm i" on terminal, wait for node_modules to install.
+3. After node_modules are installed on the project type "npm start" on terminal to start the project.
 
 
 //Note that you should have xampp to import the database on, 
