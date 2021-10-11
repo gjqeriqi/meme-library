@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
+app.use('/static',express.static('static'))
 app.set('view engine','ejs')
 
 const bodyParser = require('body-parser')

@@ -10,25 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
-        nav {
-            padding: 10px;
-            align-items: center;
-        }
-
-        a.nav-link {
-            margin-left: 10px;
-        }
-
-        .nav-ul {
-            margin-left: 20%;
-        }
-        .card{
-            margin-top:5%;
-            display: inline-block;
-            margin-right: 5%;
-        }
-    </style>
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="stylesheet" href="../static/card.css">
+    <link rel="stylesheet" href="../static/nav.css">
 </head>
 
 <body>
@@ -48,7 +32,7 @@
             </li>
         </ul>
     </nav>
-    
+
         <!-- <div class="card col-lg-4" style="width: 18rem;">
             <img class="card-img-top" src="https://wallup.net/wp-content/uploads/2018/10/04/355164-cat-meme-quote-funny-humor-grumpy-sadic.jpg" alt="Card image cap">
             <div class="card-body">
@@ -61,10 +45,10 @@
             </div>
         </div> -->
         
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <% for(let i=0; i< memes.length ; i++) { %>
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="<%- memes[i].url%>" alt="Card image cap">
                             <div class="card-body">
