@@ -11,7 +11,7 @@ const home = require('./router/homeRouter')
 const upload = require('./router/uploadRouter')
 
 app.use("/",home)
-app.use('/upload',upload)
+app.use(upload)
 
 const port = 8080
 

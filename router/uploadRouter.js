@@ -4,9 +4,6 @@ const dbCon = require('../database.js')
 
 router.get('/upload',(req, res) =>{
     res.render('upload')
-    if (err) {
-        console.log(err)
-    }
 })
 
 router.post('/postmeme', (req, res) => {

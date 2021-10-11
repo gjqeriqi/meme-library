@@ -33,6 +33,55 @@
 
 <body>
 
+    <nav class="nav" style="background-color: #343A40;">
+        <a href="" style="margin-left: 20%; text-decoration-line:none ;" ><h2 style="color: white;">Solve-X meme library</h2></a>
+        <ul class="nav flex-column nav-ul">
+            <li class="nav-item">
+                <a class="nav-link" style="color: white; text-decoration-line: none; font-size: larger;"
+                    href="#"><b>Menu</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: white; text-decoration-line: none;" href="/random">Random</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: white; text-decoration-line: none;" href="/upload">New meme</a>
+            </li>
+        </ul>
+    </nav>
+    
+        <!-- <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top" src="https://wallup.net/wp-content/uploads/2018/10/04/355164-cat-meme-quote-funny-humor-grumpy-sadic.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card'scontent.
+                </p>
+                <a href="#" class="btn btn-warning">Edit</a>
+                <a href="#" class="btn btn-danger" style="display: inline;">Delete</a>
+            </div>
+        </div> -->
+        
+        <div class="container">
+            <div class="row">
+                <% for(let i=0; i< memes.length ; i++) { %>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="<%- memes[i].url%>" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><%- memes[i].title%></h5>
+                                <p class="card-text">
+                                    <%- memes[i].des%>
+                                </p>
+                                <a href="#" class="btn btn-warning">Edit</a>
+                                <a href="#" class="btn btn-danger" style="display: inline;">Delete</a>
+                            </div>
+                    </div>
+                    <% } %> 
+            </div>
+        </div>
+    
+    </html>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -46,48 +95,3 @@
         crossorigin="anonymous"></script>
 </body>
 
-<nav class="nav" style="background-color: #343A40;">
-    <a href="" style="margin-left: 20%; text-decoration-line:none ;" ><h2 style="color: white;">Solve-X meme library</h2></a>
-    <ul class="nav flex-column nav-ul">
-        <li class="nav-item">
-            <a class="nav-link" style="color: white; text-decoration-line: none; font-size: larger;"
-                href="#"><b>Menu</b></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color: white; text-decoration-line: none;" href="/random">Random</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color: white; text-decoration-line: none;" href="/upload">New meme</a>
-        </li>
-    </ul>
-</nav>
-
-<div class="container">
-    <!-- <div class="card col-lg-4" style="width: 18rem;">
-        <img class="card-img-top" src="https://wallup.net/wp-content/uploads/2018/10/04/355164-cat-meme-quote-funny-humor-grumpy-sadic.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card'scontent.
-            </p>
-            <a href="#" class="btn btn-warning">Edit</a>
-            <a href="#" class="btn btn-danger" style="display: inline;">Delete</a>
-        </div>
-    </div> -->
-    
-    <div class="container">
-        <% for(let i=0; i< memes.length ; i++) { %>
-        <div class="card col-lg-4" style="width: 18rem;">
-            <img class="card-img-top" src="<%- memes[i].url%>" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title"><%- memes[i].title%></h5>
-                <p class="card-text">
-                    <%- memes[i].des%>
-                </p>
-                <a href="#" class="btn btn-warning">Edit</a>
-                <a href="#" class="btn btn-danger" style="display: inline;">Delete</a>
-            </div>
-        <% } %> 
-    </div>
-
-</html>
